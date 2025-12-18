@@ -23,7 +23,7 @@ def créer_une_partie(idul, secret):
     if rep.status_code == 401:
         raise PermissionError(rep.json()["message"])
     if rep.status_code == 406:
-        raise RuntimeError(rep.json()["message"])
+        raise RuntimeError(rep.json()["message"]) 
     raise ConnectionError
 
 
